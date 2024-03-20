@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h1>To-Do List <img src="images/icon1.png"></h1>
+
+            <!-- Input box for adding new to-do items -->
+            <div class="row1">
+                <input type="text" id="todoInput" class="todoInput" placeholder="Add new to-do item">
+                <button class="add-button" onclick="addTodo()">Add</button>
+            </div>
+
+            <!-- Filter buttons -->
+            <div class="row2">
+                <button class="filter" onclick="filterTodos('all')">All</button>
+                <button class="filter" onclick="filterTodos('active')">Active</button>
+                <button class="filter" onclick="filterTodos('completed')">Completed</button>
+            </div>
+
+            <!-- Search input -->
+            <div class="search">
+                <input type="text" id="searchInput" oninput="searchTodos()" placeholder="Search">
+            </div>
+
+            <!-- Container for displaying to-do items -->
+            <div id="todoList" class="todoList"></div>
+        </div>
+    </div>
+
+
+<script src="to_do.js"></script>
+</body>
+
+</html>
